@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="TestArchitecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="HomeRootView" customModule="TestArchitecture" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVL-ym-Q6t">
+                                <rect key="frame" x="162.5" y="148" width="89" height="30"/>
+                                <state key="normal" title="Fetch Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-MG-F4f">
+                                <rect key="frame" x="162.5" y="186" width="89" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="MVK-xN-3eW"/>
+                                </constraints>
+                                <state key="normal" title="Reset Button"/>
+                                <connections>
+                                    <action selector="resetButtonClicked:" destination="8bC-Xf-vdC" eventType="touchUpInside" id="jdl-sN-65m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-bM-evX" userLabel="message">
+                                <rect key="frame" x="186" y="106" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lc0-MG-F4f" firstAttribute="top" secondItem="zVL-ym-Q6t" secondAttribute="bottom" constant="8" id="GgJ-oi-JIh"/>
+                            <constraint firstItem="zVL-ym-Q6t" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Z73-KD-A0h"/>
+                            <constraint firstItem="Lc0-MG-F4f" firstAttribute="centerX" secondItem="zVL-ym-Q6t" secondAttribute="centerX" id="sfW-Cs-xpa"/>
+                            <constraint firstItem="zVL-ym-Q6t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="vb0-eR-n7Y"/>
+                            <constraint firstItem="Lc0-MG-F4f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xMa-7p-eux"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outlet property="fetchButton" destination="zVL-ym-Q6t" id="byP-DA-b1l"/>
+                            <outlet property="messageLabel" destination="Y0a-bM-evX" id="pCw-12-bKu"/>
+                            <outlet property="resetButton" destination="Lc0-MG-F4f" id="VSx-H4-BWH"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+</document>
